@@ -3,27 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B75192ED23CD073400862A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75192EC23CD073400862A0C /* AppDelegate.swift */; };
 		B75192EF23CD073400862A0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75192EE23CD073400862A0C /* SceneDelegate.swift */; };
-		B75192F123CD073500862A0C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75192F023CD073500862A0C /* LaunchViewController.swift */; };
+		B75192F123CD073500862A0C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75192F023CD073500862A0C /* SettingViewController.swift */; };
 		B75192F423CD073500862A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75192F223CD073500862A0C /* Main.storyboard */; };
 		B75192F623CD073600862A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75192F523CD073600862A0C /* Assets.xcassets */; };
 		B75192F923CD073600862A0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75192F723CD073600862A0C /* LaunchScreen.storyboard */; };
+		B751930223CD1DE700862A0C /* NetworkHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B751930123CD1DE700862A0C /* NetworkHelper */; };
+		B751930423CD1EA900862A0C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930323CD1EA900862A0C /* ApiClient.swift */; };
+		B751930623CD1EE100862A0C /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930523CD1EE100862A0C /* Horoscope.swift */; };
+		B751930823CD1FF300862A0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930723CD1FF300862A0C /* MainViewController.swift */; };
+		B751930A23CD2A0500862A0C /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930923CD2A0500862A0C /* UserPreference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B75192E923CD073400862A0C /* User_Defaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = User_Defaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75192EC23CD073400862A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B75192EE23CD073400862A0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B75192F023CD073500862A0C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		B75192F023CD073500862A0C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B75192F323CD073500862A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B75192F523CD073600862A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B75192F823CD073600862A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B75192FA23CD073600862A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B751930323CD1EA900862A0C /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		B751930523CD1EE100862A0C /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		B751930723CD1FF300862A0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B751930923CD2A0500862A0C /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B751930223CD1DE700862A0C /* NetworkHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +68,12 @@
 			children = (
 				B75192EC23CD073400862A0C /* AppDelegate.swift */,
 				B75192EE23CD073400862A0C /* SceneDelegate.swift */,
-				B75192F023CD073500862A0C /* LaunchViewController.swift */,
+				B75192F023CD073500862A0C /* SettingViewController.swift */,
 				B75192F223CD073500862A0C /* Main.storyboard */,
+				B751930723CD1FF300862A0C /* MainViewController.swift */,
+				B751930923CD2A0500862A0C /* UserPreference.swift */,
+				B751930323CD1EA900862A0C /* ApiClient.swift */,
+				B751930523CD1EE100862A0C /* Horoscope.swift */,
 				B75192F523CD073600862A0C /* Assets.xcassets */,
 				B75192F723CD073600862A0C /* LaunchScreen.storyboard */,
 				B75192FA23CD073600862A0C /* Info.plist */,
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = User_Defaults;
+			packageProductDependencies = (
+				B751930123CD1DE700862A0C /* NetworkHelper */,
+			);
 			productName = User_Defaults;
 			productReference = B75192E923CD073400862A0C /* User_Defaults.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = B75192E023CD073400862A0C;
+			packageReferences = (
+				B751930023CD1DE700862A0C /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */,
+			);
 			productRefGroup = B75192EA23CD073400862A0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75192F123CD073500862A0C /* LaunchViewController.swift in Sources */,
+				B75192F123CD073500862A0C /* SettingViewController.swift in Sources */,
 				B75192ED23CD073400862A0C /* AppDelegate.swift in Sources */,
 				B75192EF23CD073400862A0C /* SceneDelegate.swift in Sources */,
+				B751930823CD1FF300862A0C /* MainViewController.swift in Sources */,
+				B751930A23CD2A0500862A0C /* UserPreference.swift in Sources */,
+				B751930623CD1EE100862A0C /* Horoscope.swift in Sources */,
+				B751930423CD1EA900862A0C /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B751930023CD1DE700862A0C /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/NetworkHelperSPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B751930123CD1DE700862A0C /* NetworkHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B751930023CD1DE700862A0C /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */;
+			productName = NetworkHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B75192E123CD073400862A0C /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingViewController.swift
 //  User_Defaults
 //
 //  Created by Amy Alsaydi on 1/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+class SettingViewController: UIViewController {
     
     @IBOutlet weak var textFeild: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -22,13 +22,22 @@ class LaunchViewController: UIViewController {
         pickerView.dataSource = self
         pickerView.delegate = self
         
+        
         pickerData = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     }
+    
+    @IBAction func setSignPressed(_ sender: Any) {
+        
+        // UserPreference.shared.updateSign(sign: <#T##String#>)
+    }
+    
+    
+   
 
 
 }
 
-extension LaunchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
@@ -40,6 +49,13 @@ extension LaunchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let sign = pickerData[row].lowercased() as String
+        
+        UserPreference.shared.updateSign(sign: sign)
     }
     
     
