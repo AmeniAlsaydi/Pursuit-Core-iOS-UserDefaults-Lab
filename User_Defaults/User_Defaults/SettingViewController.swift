@@ -8,12 +8,21 @@
 
 import UIKit
 
+// delegating object
+
+protocol SettingDelegate {
+    func didChangeSign(sign: String)
+    // func didChangeName(name: String)
+}
+
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var textFeild: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     
     var pickerData: [String] = [String]()
+    
+    var settingsDelegate: SettingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +34,6 @@ class SettingViewController: UIViewController {
         
         pickerData = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     }
-    
-    @IBAction func setSignPressed(_ sender: Any) {
-        
-        // UserPreference.shared.updateSign(sign: <#T##String#>)
-    }
-    
-    
-   
 
 
 }
@@ -56,6 +57,9 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         let sign = pickerData[row].lowercased() as String
         
         UserPreference.shared.updateSign(sign: sign)
+        
+        settingsDelegate?.didChangeSign(sign: sign)
+        
     }
     
     

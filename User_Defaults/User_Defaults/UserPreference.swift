@@ -24,7 +24,7 @@ class UserPreference {
         UserDefaults.standard.set(sign, forKey: UserPreferenceKey.sign)
     }
     
-    func getSign() -> String? {
+    func getSign() -> String {
         guard let userSign = UserDefaults.standard.object(forKey: UserPreferenceKey.sign) as? String  else {
             return "gemini"
         }
