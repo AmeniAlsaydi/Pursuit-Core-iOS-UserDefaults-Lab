@@ -26,7 +26,9 @@ class SettingViewController: UIViewController {
     
     var months: Array<String> = Calendar.current.monthSymbols
     var daysArray = Array(1...31)
-    
+    var date = ""
+    var day = "1"
+    var month = "January"
     
     var sign = "gemini" {
         didSet {
@@ -113,14 +115,15 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         if pickerView == signPickerView {
             sign = pickerData[row].lowercased() as String
         } else if pickerView == customDatePicker {
-            print("component\(component), row:\(row)")
-            var str = ""
+            // print("component\(component), row:\(row)")
+            
             if component == 0 {
-                str += "Day \(daysArray[row])"
+                day = daysArray[row].description
             } else if component == 1 {
-                str += "Month \(months[row])"
+                month = months[row]
             }
-            print(str)
+            date = "\(month) \(day)"
+            print(date)
             
         }
         
