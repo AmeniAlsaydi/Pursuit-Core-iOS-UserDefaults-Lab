@@ -30,5 +30,16 @@ class UserPreference {
         }
         return userSign
     }
+    
+    func updateName(name: String) {
+        UserDefaults.standard.set(name, forKey: UserPreferenceKey.name)
+    }
+    
+    func getName() -> String? {
+        guard let userName = UserDefaults.standard.object(forKey: UserPreferenceKey.name) as? String  else {
+                return nil
+            }
+            return userName
+        }
+    }
 
-}

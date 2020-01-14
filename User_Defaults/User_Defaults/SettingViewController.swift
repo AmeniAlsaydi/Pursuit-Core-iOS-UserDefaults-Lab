@@ -12,7 +12,7 @@ import UIKit
 
 protocol SettingDelegate {
     func didChangeSign(sign: String)
-    // func didChangeName(name: String)
+    func didChangeName(name: String)
 }
 
 class SettingViewController: UIViewController {
@@ -30,6 +30,8 @@ class SettingViewController: UIViewController {
         
         pickerView.dataSource = self
         pickerView.delegate = self
+        
+        textFeild.delegate = self
         
         
         pickerData = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
@@ -62,6 +64,14 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         
     }
     
-    
 }
 
+extension SettingViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let name = textFeild.text ?? ""
+        UserPreference.shared.updateName(name: name)
+        settingsDelegate?.didChangeName(name: name)
+    }
+    
+}

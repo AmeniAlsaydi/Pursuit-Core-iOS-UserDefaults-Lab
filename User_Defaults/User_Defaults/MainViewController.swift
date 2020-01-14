@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var horoscopeLabel: UILabel!
     
     var sign = UserPreference.shared.getSign()
+    var name = UserPreference.shared.getName()
 
     
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class MainViewController: UIViewController {
     }
     
     func updateUI() {
+        welcomeLabel.text = "Hello \(name?.capitalized ?? "")!"
         
         APIClient.getHoroscope(sign: sign) { (result) in
             switch result {
@@ -48,6 +50,10 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: SettingDelegate {
+    func didChangeName(name: String) {
+        welcomeLabel.text = "Hello \(name.capitalized)!"
+    }
+    
     func didChangeSign(sign: String) {
         APIClient.getHoroscope(sign: sign) { (result) in
             switch result {
