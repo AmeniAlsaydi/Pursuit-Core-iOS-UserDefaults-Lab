@@ -140,7 +140,6 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         if pickerView == signPickerView {
             sign = pickerData[row].lowercased() as String
         } else if pickerView == customDatePicker {
-            // print("component\(component), row:\(row)")
             
             if component == 0 {
                 day = daysArray[row].description
@@ -158,16 +157,9 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             let newDate = dateFormatter.date(from: date)!
             print(newDate)
             
-            //            if (HoroscopeDates.AquariusStart.date()...HoroscopeDates.AquariusEnd.date()).contains(newDate){
-            //                print("yes")
-            //            } else {
-            //                print("no")
-            //            }
-            
             getDate(date: newDate)
             
         }
-        
         
     }
     
