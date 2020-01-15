@@ -52,15 +52,37 @@ class SettingViewController: UIViewController {
         pickerData = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     }
     
-    
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM"
-        let date = dateFormatter.string(from: sender.date)
-        print(date)
-        
-        
+    func getDate(date: Date) {
+        switch date {
+        case HoroscopeDates.AquariusStart.date()...HoroscopeDates.AquariusEnd.date():
+            sign = "aquarius"
+        case HoroscopeDates.AriesStart.date()...HoroscopeDates.AriesEnd.date():
+            sign = "aries"
+        case HoroscopeDates.CancerStart.date()...HoroscopeDates.CancerEnd.date():
+            sign = "cancer"
+        case HoroscopeDates.CapricornStart.date()...HoroscopeDates.CapricornEnd.date():
+            sign = "capricorn"
+        case HoroscopeDates.GeminiStart.date()...HoroscopeDates.GeminiEnd.date():
+            sign = "gemini"
+        case HoroscopeDates.LeoStart.date()...HoroscopeDates.LeoEnd.date():
+            sign = "leo"
+        case HoroscopeDates.VirgoStart.date()...HoroscopeDates.VirgoEnd.date():
+            sign = "virgo"
+        case HoroscopeDates.LibraStart.date()...HoroscopeDates.LibraEnd.date():
+            sign = "libra"
+        case HoroscopeDates.ScorpioStart.date()...HoroscopeDates.ScorpioEnd.date():
+            sign = "scorpio"
+        case HoroscopeDates.SagittariusStart.date()...HoroscopeDates.SagittariusEnd.date():
+            sign = "sagittarius"
+        case HoroscopeDates.TaurusStart.date()...HoroscopeDates.TaurusEnd.date():
+            sign = "taurus"
+        case HoroscopeDates.PiscesStart.date()...HoroscopeDates.PiscesEnd.date():
+            sign = "pisces"
+            
+        default:
+            print("out of range")
+            
+        }
     }
     
     
@@ -89,7 +111,7 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             }
             if component == 1 {
                 return 12
-
+                
             }
         }
         return 1
@@ -123,7 +145,23 @@ extension SettingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 month = months[row]
             }
             date = "\(month) \(day)"
+            
+            
             print(date)
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+            dateFormatter.dateFormat = "MMMM dd"
+            let newDate = dateFormatter.date(from: date)!
+            print(newDate)
+            
+            //            if (HoroscopeDates.AquariusStart.date()...HoroscopeDates.AquariusEnd.date()).contains(newDate){
+            //                print("yes")
+            //            } else {
+            //                print("no")
+            //            }
+            
+            getDate(date: newDate)
             
         }
         

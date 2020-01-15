@@ -18,6 +18,7 @@
 		B751930623CD1EE100862A0C /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930523CD1EE100862A0C /* Horoscope.swift */; };
 		B751930823CD1FF300862A0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930723CD1FF300862A0C /* MainViewController.swift */; };
 		B751930A23CD2A0500862A0C /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751930923CD2A0500862A0C /* UserPreference.swift */; };
+		B7A88B4123CEA6DB00606436 /* HoroscopeDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B4023CEA6DB00606436 /* HoroscopeDates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B751930523CD1EE100862A0C /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		B751930723CD1FF300862A0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B751930923CD2A0500862A0C /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
+		B7A88B4023CEA6DB00606436 /* HoroscopeDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				B75192EE23CD073400862A0C /* SceneDelegate.swift */,
 				B75192F023CD073500862A0C /* SettingViewController.swift */,
 				B75192F223CD073500862A0C /* Main.storyboard */,
+				B7A88B4023CEA6DB00606436 /* HoroscopeDates.swift */,
 				B751930723CD1FF300862A0C /* MainViewController.swift */,
 				B751930923CD2A0500862A0C /* UserPreference.swift */,
 				B751930323CD1EA900862A0C /* ApiClient.swift */,
@@ -160,6 +163,7 @@
 			files = (
 				B75192F123CD073500862A0C /* SettingViewController.swift in Sources */,
 				B75192ED23CD073400862A0C /* AppDelegate.swift in Sources */,
+				B7A88B4123CEA6DB00606436 /* HoroscopeDates.swift in Sources */,
 				B75192EF23CD073400862A0C /* SceneDelegate.swift in Sources */,
 				B751930823CD1FF300862A0C /* MainViewController.swift in Sources */,
 				B751930A23CD2A0500862A0C /* UserPreference.swift in Sources */,
