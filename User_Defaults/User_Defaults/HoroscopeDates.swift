@@ -31,6 +31,8 @@ enum HoroscopeDates: String {
         case SagittariusStart = "11/22"
         case SagittariusEnd = "12/21"
         case CapricornStart = "12/22"
+    case CapriocornEndYear = "12/31"
+    case CapricornStartYear = "01/01"
         case CapricornEnd = "01/19"
         case AquariusStart = "01/20"
         case AquariusEnd = "02/18"

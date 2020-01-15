@@ -60,7 +60,10 @@ class SettingViewController: UIViewController {
             sign = "aries"
         case HoroscopeDates.CancerStart.date()...HoroscopeDates.CancerEnd.date():
             sign = "cancer"
-        case HoroscopeDates.CapricornStart.date()...HoroscopeDates.CapricornEnd.date():
+            // bug is here 
+        case HoroscopeDates.CapricornStart.date()...HoroscopeDates.CapriocornEndYear.date():
+            sign = "capricorn"
+        case HoroscopeDates.CapricornStartYear.date()...HoroscopeDates.CapricornEnd.date():
             sign = "capricorn"
         case HoroscopeDates.GeminiStart.date()...HoroscopeDates.GeminiEnd.date():
             sign = "gemini"
